@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron',sans-serif;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(35,160,35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB,#E0F6FF);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.char {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+.jump {
+    animation: jump 500ms  ease-out;
+}
+
+.clouds {
+    position: absolute;
+    width: 350px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+.clouds2 {
+    position: absolute;
+    width: 150px;
+    top: 150px;
+    animation: clouds-animation2 90s infinite linear;
+}
+
+.clouds3 {
+    position: absolute;
+    width: 150px;
+    top: 150px;
+    animation: clouds-animation3 55s infinite linear;
+}
+
+.clouds4 {
+    position: absolute;
+    top:200px;
+    width: 130px;
+    animation: clouds-animation4 70s infinite linear;
+}
+
+.plane1 {
+    position: absolute;
+    width: 100px;
+    top: 100px;
+    animation: plane1-animation 30s infinite linear;
+   
+}
+
+.birds1 {
+    position: absolute;
+    width: 50px;
+    top: 170px;
+    animation: plane1-animation 50s infinite linear;
+    
+}
+
+@keyframes pipe-animation {
+    from{
+        /* começa com o msm tamanho do sprite negativo */
+        right:-80px;
+    } to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+
+}
+
+@keyframes clouds-animation {
+    from{
+        
+        right:-350px;
+    } to {
+        right: 100%;
+    }
+}
+
+@keyframes clouds-animation2 {
+    from{
+        
+        right:-1550px;
+    } to {
+        right: 100%;
+    }
+}
+
+@keyframes clouds-animation3 {
+    from{
+        
+        right:-550px;
+    } to {
+        right: 100%;
+    }
+}
+
+@keyframes clouds-animation4 {
+    from{
+        
+        right:-350px;
+    } to {
+        right: 100%;
+    }
+}
+
+@keyframes plane1-animation {
+    from{
+        
+        right: -50px;
+    } to {
+        right: 100%;
+    }
+}
+
+@keyframes birds1-animation {
+    from{
+        
+        right: -350px;
+    } to {
+        right: 100%;
+    }
+}
+
+
+
+.gameover {
+    display: none;
+    color:  red;
+    width: 200px;
+    margin-top: 18%;
+    margin-left: 40%;
+    position: absolute;
+    
+}
+
+.start-game {
+    display: none;
+}
+
+.intro {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(35,160,35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB,#E0F6FF);
+}
+
+.logo {
+    width: 40%;
+    position: absolute;
+    left: 30%;
+    bottom: 20%; 
+    animation: logo-animation 1.5s  linear;
+}
+
+@keyframes logo-animation {
+    from{
+        bottom:-80px;
+    } to {
+        bottom: 20%;
+    }
+}
+
+@keyframes logo-animation2 {
+    from{
+        top:-180px;
+    } to {
+        top: 1%;
+    }
+}
+
+.pschar1 {
+    width: 150px;
+    position: absolute;
+    left:800px;
+    bottom: 0;
+}
+
+.pschar2 {
+    width: 250px;
+    position: absolute;
+    left:150px;
+    bottom: 0;
+}
+
+.pschar3 {
+    width: 120px;
+    position: absolute;
+    left:1000px;
+    bottom:350px; 
+}
+
+.pschar4 {
+    width: 220px; 
+    left: 41%;
+    position: absolute;
+    animation: logo-animation2 25s  linear;
+}
+
+
+
+
+.night {
+    background: linear-gradient(#090909,#E0F6FF) !important;
+}
+
+.day {
+    background: linear-gradient(#87CEEB,#E0F6FF) !important;
+}
+
+.after {
+    background: linear-gradient(#eaea78,#E0F6FF) !important;
+}
